@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dancers>
+    <Dancer idDancer="1">
+        <Concert>
+            <idConcert>1</idConcert>
+            <Area>
+                <cardinalLocation>south</cardinalLocation>
+                <idArea>1</idArea>
+            </Area>
+            <Date>27/05/2022</Date>
+            <Duration>2hs</Duration>
+            <idTickets>1</idTickets>
+            <TimePlay>20:30</TimePlay>
+        </Concert>
+        <Studio>2</Studio>
+    </Dancer>
+</Dancers>

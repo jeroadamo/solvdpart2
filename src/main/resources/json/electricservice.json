@@ -1,0 +1,5 @@
+{
+  "idElectricService":1,
+  "area":{"idArea":1, "cardinalLocation":"south"},
+  "worksOnAltitude":true
+}

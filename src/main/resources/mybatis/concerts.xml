@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.solvd.interfaces.IConcertDao">
+    <resultMap id="ConcertMap" type="com.solvd.entities.Concert" autoMapping="false">
+        <result column="idConcerts" property="idConcerts" />
+        <result column="timePlay" property="timePlay"/>
+        <result column="duration" property="duration" />
+        <result column="date" property="date" />
+        <result column="idArea" property="idArea" />
+        <result column="idTickets" property="idTickets"/>
+
+    </resultMap>
+    <select id="getByIdConcert" parameterType="int" resultMap="ConcertMap">
+        SELECT * FROM Concerts WHERE idConcerts =#{id};
+    </select>
+    <select id="getByIdBand" parameterType="int" resultMap="ConcertMap">
+        SELECT * FROM Concerts;
+    </select>
+</mapper>

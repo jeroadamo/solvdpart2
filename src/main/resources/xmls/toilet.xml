@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Toilets>
+    <Toilet idToilet = "2">
+        <Area>
+            <CardinalLocation>North</CardinalLocation>
+            <idArea>2</idArea>
+        </Area>
+    </Toilet>
+    <Toilet>
+        <Area>
+            <CardinalLocation>South</CardinalLocation>
+            <idArea>1</idArea>
+        </Area>
+    </Toilet>
+</Toilets>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Instruments>
+    <Instrument>
+        <idInstrument>2</idInstrument>
+        <Kind>Drums</Kind>
+    </Instrument>
+    <Instrument>
+        <idInstrument>3</idInstrument>
+        <Kind>Guitar</Kind>
+    </Instrument>
+</Instruments>
+

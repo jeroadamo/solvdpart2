@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConcertsList>
+    <concerts idConcerts="1">
+        <area>
+            <cardinalLocation>south</cardinalLocation>
+            <idArea>1</idArea>
+        </area>
+        <Date>27/05/2022</Date>
+        <duration>2hs</duration>
+        <idTickets>1</idTickets>
+        <timePlay>20:30</timePlay>
+    </concerts>
+    <concerts idConcerts="2">
+        <area>
+            <cardinalLocation>north</cardinalLocation>
+            <idArea>2</idArea>
+        </area>
+        <Date>27/05/2022</Date>
+        <duration>2hs</duration>
+        <idTickets>1</idTickets>
+        <timePlay>22:30</timePlay>
+    </concerts>
+</ConcertsList>

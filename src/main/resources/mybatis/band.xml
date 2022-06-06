@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.solvd.interfaces.IBandDao">
+    <resultMap id="BandMapped" type="com.solvd.entities.Band" autoMapping="false">
+        <result column="idBand" property="idBand" />
+        <result column="idConcerts" property="idConcerts"/>
+        <result column="name" property="name" />
+    </resultMap>
+    <select id="getByIdBand" parameterType="int" resultMap="BandMapped">
+        SELECT * FROM Bands WHERE idBand =#{id};
+    </select>
+    <select id="getAllBand" resultMap="BandMapped">
+        SELECT * FROM Bands;
+    </select>
+    <delete id="deleteBand" >
+
+    </delete>
+
+</mapper>
