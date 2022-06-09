@@ -19,4 +19,8 @@ public class Instrument {
     public void setKind(String kind) {
         this.kind = kind;
     }
+    @Override
+    public String toString() {
+        return "Instrument{" + "idInstruments=" + idInstruments + ", kind='" + kind + '\'' + '}';
+    }
 }

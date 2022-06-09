@@ -40,6 +40,14 @@ public class AreaDao implements IAreaDao {
     }
     @Override
     public void delete(Area area) throws SQLException {
+        String query = "DELETE FROM Area WHERE idArea = ?";
+        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern");
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setInt(1, area.getIdArea());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new SQLException(e);
+        }
     }
     @Override
     public List<Area> selectAll() throws SQLException {

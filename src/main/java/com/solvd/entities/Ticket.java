@@ -34,4 +34,8 @@ public class Ticket {
     public void setNationalId(int nationalId) {
         this.nationalId = nationalId;
     }
+    @Override
+    public String toString() {
+        return "Ticket{" + "idTickets=" + idTickets + ", nameSurname='" + nameSurname + '\'' + ", email='" + email + '\'' + ", nationalId=" + nationalId + '}';
+    }
 }

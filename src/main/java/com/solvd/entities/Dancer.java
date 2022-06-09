@@ -1,22 +1,31 @@
 package com.solvd.entities;
+
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement()
 public class Dancer {
-    private int idDancers;
+
+    private int idDancer;
     private Concert concert;
     private String studio;
-    public Dancer(int idDancers, Concert concert, String studio) {
-        this.idDancers = idDancers;
+    public Dancer(int idDancer, Concert concert, String studio) {
+        this.idDancer = idDancer;
         this.concert = concert;
         this.studio = studio;
     }
-    public int getIdDancers() {
-        return idDancers;
+    public Dancer(){}
+    public int getIdDancer() {
+        return idDancer;
     }
-    public void setIdDancers(int idDancers) {
-        this.idDancers = idDancers;
+    @XmlAttribute(name = "idDancer")
+    public void setIdDancer(int idDancer) {
+        this.idDancer = idDancer;
     }
     public String getStudio() {
         return studio;
-    }
+    }@XmlElement(name = "Studio")
     public void setStudio(String studio) {
         this.studio = studio;
     }
@@ -25,5 +34,9 @@ public class Dancer {
     }
     public void setConcert(Concert concert) {
         this.concert = concert;
+    }
+    @Override
+    public String toString() {
+        return "Dancer{" + "idDancer=" + idDancer + ", concert=" + concert + ", studio='" + studio + '\'' + '}';
     }
 }

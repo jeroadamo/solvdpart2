@@ -2,6 +2,7 @@ package com.solvd;
 
 import com.solvd.daos.ConcertDao;
 import com.solvd.daos.DjDao;
+import com.solvd.daos.InstrumentDao;
 import com.solvd.service.ConcertDaoService;
 import com.solvd.service.DjDaoService;
 import com.solvd.service.ToiletDaoService;
@@ -26,6 +27,9 @@ public class DaoRunner {
 //        //-------------------------------------------------------------
 //        ConcertDao concertDao = new ConcertDao();
 //        LOGGER.info(concertDao.selectAll());
+
+//        InstrumentDao instrumentDao = new InstrumentDao();
+//        LOGGER.info(instrumentDao.selectAll());
 
 
     }

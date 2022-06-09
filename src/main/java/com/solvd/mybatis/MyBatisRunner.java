@@ -16,7 +16,11 @@ public class MyBatisRunner {
 
     public static void main(String[] args) throws IOException {
         MyBatisUtil myBatisUtil = new MyBatisUtil();
-        myBatisUtil.getMapperBand();
-        myBatisUtil.getSelectAll();
+//        myBatisUtil.getMapperBand(2);
+//        myBatisUtil.getSelectAllBand();
+//        myBatisUtil.getMapperConcert(1);
+//        myBatisUtil.getSelectAllConcerts();
+//        myBatisUtil.insertBand(10,2,"Charly García");
+//        myBatisUtil.deleteBand(10);
     }
 }

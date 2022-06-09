@@ -7,7 +7,7 @@
         </area>
         <Date>27/05/2022</Date>
         <duration>2hs</duration>
-        <idTickets>1</idTickets>
+        <idTicket>1</idTicket>
         <timePlay>20:30</timePlay>
     </concerts>
     <concerts idConcerts="2">
@@ -17,7 +17,7 @@
         </area>
         <Date>27/05/2022</Date>
         <duration>2hs</duration>
-        <idTickets>1</idTickets>
+        <idTicket>1</idTicket>
         <timePlay>22:30</timePlay>
     </concerts>
 </ConcertsList>

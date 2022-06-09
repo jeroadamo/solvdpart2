@@ -1,17 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Dancers>
-    <Dancer idDancer="1">
-        <Concert>
-            <idConcert>1</idConcert>
-            <Area>
-                <cardinalLocation>south</cardinalLocation>
+    <dancers idDancer="2">
+        <concert idConcerts="4">
+            <area>
+                <cardinalLocation>north</cardinalLocation>
                 <idArea>1</idArea>
-            </Area>
-            <Date>27/05/2022</Date>
-            <Duration>2hs</Duration>
-            <idTickets>1</idTickets>
-            <TimePlay>20:30</TimePlay>
-        </Concert>
-        <Studio>2</Studio>
-    </Dancer>
+            </area>
+            <Date>28/05/2022</Date>
+            <duration>3hs</duration>
+            <idTicket>25</idTicket>
+            <timePlay>22:30</timePlay>
+        </concert>
+        <Studio>MTV</Studio>
+    </dancers>
+    <dancers idDancer="3">
+        <concert idConcerts="4">
+            <area>
+                <cardinalLocation>north</cardinalLocation>
+                <idArea>1</idArea>
+            </area>
+            <Date>28/05/2022</Date>
+            <duration>3hs</duration>
+            <idTicket>25</idTicket>
+            <timePlay>22:30</timePlay>
+        </concert>
+        <Studio>MTV</Studio>
+    </dancers>
 </Dancers>

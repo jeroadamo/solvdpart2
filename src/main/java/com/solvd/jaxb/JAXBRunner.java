@@ -20,7 +20,7 @@ import java.util.Collection;
 
 public class JAXBRunner {
     private final static Logger LOGGER = LogManager.getLogger(JAXBRunner.class);
-    public static void main(String args[]) throws JAXBException {
+    public static void main(String args[]) throws JAXBException, IOException {
         ArrayList<Concert> concertArrayList = new ArrayList<>();
         ConcertDaoService concerts = new ConcertDaoService();
         Concert concert = new Concert(1, "20:30", "2hs", "27/05/2022", new Area(1, "south"), 1);
@@ -40,5 +40,8 @@ public class JAXBRunner {
         } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
+
+        JAXBUnmarshaller jaxbUnmarshaller = new JAXBUnmarshaller();
+        LOGGER.info(jaxbUnmarshaller.unmarshall());
     }
 }

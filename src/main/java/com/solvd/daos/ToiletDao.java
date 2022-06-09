@@ -32,7 +32,7 @@ public class ToiletDao implements IToiletDao {
     public void delete(Object o) throws SQLException {
     }
     @Override
-    public List selectAll() throws SQLException {
+    public List<Toilet> selectAll() throws SQLException {
         return null;
     }
 }

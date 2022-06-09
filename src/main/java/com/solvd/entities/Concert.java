@@ -8,34 +8,34 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Concert")
 public class Concert {
-    private int idConcerts;
+    private int idConcert;
     private String timePlay;
     private String duration;
     private String date;
     private Area area;
-    private int idTickets;
-    public Concert(int idConcerts, String time_play, String duration, String date, Area area, int idTickets) {
-        this.idConcerts = idConcerts;
+    private int idTicket;
+    public Concert(int idConcert, String time_play, String duration, String date, Area area, int idTicket) {
+        this.idConcert = idConcert;
         this.timePlay = time_play;
         this.duration = duration;
         this.date = date;
         this.area = area;
-        this.idTickets = idTickets;
+        this.idTicket = idTicket;
     }
     public Concert() {
     }
-    public int getIdConcerts() {
-        return idConcerts;
+    public int getIdConcert() {
+        return idConcert;
     }
     @XmlAttribute(name = "idConcerts")
-    public void setIdConcerts(int idConcerts) {
-        this.idConcerts = idConcerts;
+    public void setIdConcert(int idConcert) {
+        this.idConcert = idConcert;
     }
-    public int getIdTickets() {
-        return idTickets;
+    public int getIdTicket() {
+        return idTicket;
     }
-    public void setIdTickets(int idTickets) {
-        this.idTickets = idTickets;
+    public void setIdTicket(int idTicket) {
+        this.idTicket = idTicket;
     }
     public String getTimePlay() {
         return timePlay;
@@ -65,6 +65,6 @@ public class Concert {
     }
     @Override
     public String toString() {
-        return "Concert{" + "idConcerts=" + idConcerts + ", time_Play='" + timePlay + '\n' + "duration='" + duration + '\'' + ", date='" + date + '\'' + "area=" + area + ", idTickets=" + idTickets + '\n';
+        return "Concert{" + "idConcerts=" + idConcert + ", time_Play='" + timePlay + '\n' + "duration='" + duration + '\'' + ", date='" + date + '\'' + "area=" + area + ", idTickets=" + idTicket + '\n';
     }
 }

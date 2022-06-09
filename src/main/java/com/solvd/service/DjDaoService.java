@@ -10,7 +10,7 @@ public class DjDaoService {
     ConcertDaoService concertDaoService = new ConcertDaoService();
     IDjDao djDao = new DjDao();
     public Dj setConcertForDj(Dj dj) {
-        dj.setConcert(concertDaoService.getByConcertId(dj.getConcert().getIdConcerts()));
+        dj.setConcert(concertDaoService.getByConcertId(dj.getConcert().getIdConcert()));
         return dj;
     }
     public Dj getByDjId(int idDj) {

@@ -14,8 +14,11 @@
     <select id="getAllBand" resultMap="BandMapped">
         SELECT * FROM Bands;
     </select>
-    <delete id="deleteBand" >
-
+    <insert id="insertBand" parameterType="com.solvd.entities.Band">
+        INSERT INTO Bands (idBand, idConcerts, name) VALUES (#{idBand},#{idConcerts},#{name});
+    </insert>
+    <delete id="deleteBandById" >
+        DELETE FROM Bands WHERE idBand = #{id};
     </delete>
 
 </mapper>

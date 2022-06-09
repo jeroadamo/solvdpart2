@@ -19,6 +19,8 @@
 
     <mappers>
         <mapper resource = "mybatis/band.xml"/>
+        <mapper resource = "mybatis/concerts.xml"/>
+
     </mappers>
 
 </configuration>

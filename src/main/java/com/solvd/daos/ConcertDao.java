@@ -28,12 +28,12 @@ public class ConcertDao implements IConcertDao {
         String query = "INSERT INTO Concerts (idConcerts,time_play,date,duration,idArea,idTickets) VALUES (?,?,?,?,?,?)";
         Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern");
         try (PreparedStatement ps = connection.prepareStatement(query)) {
-            ps.setInt(1, concert.getIdConcerts());
+            ps.setInt(1, concert.getIdConcert());
             ps.setString(2, concert.getTimePlay());
             ps.setString(3, concert.getDate());
             ps.setString(4, concert.getDuration());
             ps.setObject(5, concert.getArea());
-            ps.setInt(6, concert.getIdTickets());
+            ps.setInt(6, concert.getIdTicket());
             ps.executeUpdate();
             System.out.println("Concert successfully added to DB server");
         } catch (SQLException e) {
@@ -48,7 +48,7 @@ public class ConcertDao implements IConcertDao {
         String query = "DELETE FROM Concerts WHERE idConcerts = ?";
         Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern");
         try (PreparedStatement ps = connection.prepareStatement(query)) {
-            ps.setInt(1, concert.getIdConcerts());
+            ps.setInt(1, concert.getIdConcert());
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new SQLException(e);
