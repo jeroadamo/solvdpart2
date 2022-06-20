@@ -19,7 +19,7 @@
 
     <mappers>
         <mapper resource = "mybatis/band.xml"/>
-        <mapper resource = "mybatis/concerts.xml"/>
+        <mapper resource = "mybatis/ticket.xml"/>
 
     </mappers>
 

@@ -1,6 +1,7 @@
 package com.solvd.staxparser;
 
 import com.solvd.entities.Band;
+import com.solvd.entities.Ticket;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
@@ -16,40 +17,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StAXParserUtil {
-    public List<Band> parser(String path) throws FileNotFoundException, XMLStreamException {
+    public List<Ticket> parser(String path) throws FileNotFoundException, XMLStreamException {
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         XMLEventReader reader = xmlInputFactory.createXMLEventReader(new FileInputStream(path));
-        Band band = null;
-        List<Band> bands = new ArrayList<Band>();
+        Ticket ticket = null;
+        List<Ticket> tickets = new ArrayList<Ticket>();
         while (reader.hasNext()) {
             XMLEvent nextEvent = reader.nextEvent();
             if (nextEvent.isStartElement()) {
                 StartElement startElement = nextEvent.asStartElement();
                 switch (startElement.getName().getLocalPart()) {
-                    case "Band":
-                        band = new Band();
-                        Attribute id = startElement.getAttributeByName(new QName("idBand"));
-                        if (id != null) {
-                            band.setIdBand(Integer.parseInt(id.getValue()));
-                        }
-                        break;
-                    case "idConcert":
+                    case "Ticket":
+                        ticket = new Ticket();
                         nextEvent = reader.nextEvent();
-                        band.setIdConcerts(Integer.parseInt(nextEvent.asCharacters().getData()));
                         break;
-                    case "name":
+                    case "email":
                         nextEvent = reader.nextEvent();
-                        band.setName(nextEvent.asCharacters().getData());
+                        ticket.setEmail(nextEvent.asCharacters().getData());
+                        break;
+                    case "TicketId":
+                        nextEvent = reader.nextEvent();
+                        ticket.setIdTickets(Integer.parseInt(nextEvent.asCharacters().getData()));
+                        break;
+                    case "CompleteName":
+                        nextEvent = reader.nextEvent();
+                        ticket.setNameSurname(nextEvent.asCharacters().getData());
+                        break;
+                    case "NationalIdentification":
+                        nextEvent = reader.nextEvent();
+                        ticket.setNationalId(Integer.parseInt(nextEvent.asCharacters().getData()));
+                        break;
                 }
             }
             if (nextEvent.isEndElement()) {
                 EndElement endElement = nextEvent.asEndElement();
-                if (endElement.getName().getLocalPart().equals("Band")) {
-                    bands.add(band);
+                if (endElement.getName().getLocalPart().equals("Ticket")) {
+                    tickets.add(ticket);
                 }
             }
         }
-        return bands;
+        return tickets;
     }
 }
 

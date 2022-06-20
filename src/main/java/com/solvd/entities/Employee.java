@@ -3,22 +3,16 @@ package com.solvd.entities;
 public class Employee {
     private int idEmployee;
     private String name;
-    private Integer idFoodDrinksStand;
-    private Integer idSecurity;
-    private Integer idElectricService;
-    public Employee(int idEmployee, String name, Integer idFood_drinks_stand,Integer idSecurity, Integer idElectric_service) {
+    private FoodAndDrinkStand foodAndDrinkStand;
+    private Security security;
+    private ElectricService electricService;
+
+    public Employee(int idEmployee, String name, FoodAndDrinkStand foodAndDrinkStand, Security security, ElectricService electricService) {
         this.idEmployee = idEmployee;
         this.name = name;
-        idFoodDrinksStand = idFood_drinks_stand;
-        this.idSecurity = idSecurity;
-        idElectricService = idElectric_service;
-    }
-    public Employee(int idEmployee, String name,Integer idElectric_service){
-        this.idEmployee = idEmployee;
-        this.name = name;
-        this.idElectricService = idElectric_service;
-    }
-    public Employee() {
+        this.foodAndDrinkStand = foodAndDrinkStand;
+        this.security = security;
+        this.electricService = electricService;
     }
     public int getIdEmployee() {
         return idEmployee;
@@ -32,22 +26,22 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
-    public int getIdFoodDrinksStand() {
-        return idFoodDrinksStand;
+    public FoodAndDrinkStand getFoodAndDrinkStand() {
+        return foodAndDrinkStand;
     }
-    public void setIdFoodDrinksStand(int idFoodDrinksStand) {
-        this.idFoodDrinksStand = idFoodDrinksStand;
+    public void setFoodAndDrinkStand(FoodAndDrinkStand foodAndDrinkStand) {
+        this.foodAndDrinkStand = foodAndDrinkStand;
     }
-    public int getIdSecurity() {
-        return idSecurity;
+    public Security getSecurity() {
+        return security;
     }
-    public void setIdSecurity(int idSecurity) {
-        this.idSecurity = idSecurity;
+    public void setSecurity(Security security) {
+        this.security = security;
     }
-    public int getIdElectricService() {
-        return idElectricService;
+    public ElectricService getElectricService() {
+        return electricService;
     }
-    public void setIdElectricService(int idElectricService) {
-        this.idElectricService = idElectricService;
+    public void setElectricService(ElectricService electricService) {
+        this.electricService = electricService;
     }
 }

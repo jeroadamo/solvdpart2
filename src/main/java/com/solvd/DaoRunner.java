@@ -30,7 +30,7 @@ public class DaoRunner {
 
 //        InstrumentDao instrumentDao = new InstrumentDao();
 //        LOGGER.info(instrumentDao.selectAll());
-
+        LOGGER.info(concertDaoService.getByConcertId(2));
 
     }
 }

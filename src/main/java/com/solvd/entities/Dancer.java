@@ -3,16 +3,20 @@ package com.solvd.entities;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
 
-@XmlRootElement()
+import java.util.List;
+
+@XmlRootElement(name = "Dancer")
 public class Dancer {
 
     private int idDancer;
-    private Concert concert;
+    private List<Concert> concerts;
     private String studio;
-    public Dancer(int idDancer, Concert concert, String studio) {
+    private List<Dancer> dancers;
+    public Dancer(int idDancer, List<Concert> concerts, String studio) {
         this.idDancer = idDancer;
-        this.concert = concert;
+        this.concerts = concerts;
         this.studio = studio;
     }
     public Dancer(){}
@@ -25,18 +29,28 @@ public class Dancer {
     }
     public String getStudio() {
         return studio;
-    }@XmlElement(name = "Studio")
+    }
+    @XmlElement(name = "Studio")
     public void setStudio(String studio) {
         this.studio = studio;
     }
-    public Concert getConcert() {
-        return concert;
+    public List<Concert> getConcerts() {
+        return concerts;
     }
-    public void setConcert(Concert concert) {
-        this.concert = concert;
+    @XmlElement(name = "Concert")
+    public void setConcerts(List<Concert> concerts) {
+        this.concerts = concerts;
     }
     @Override
     public String toString() {
-        return "Dancer{" + "idDancer=" + idDancer + ", concert=" + concert + ", studio='" + studio + '\'' + '}';
+        return "Dancer{" + "idDancer=" + idDancer + ", concert=" + concerts + ", studio='" + studio + '\'' + "dancers" +dancers;
     }
+    public List<Dancer> getDancers() {
+        return dancers;
+    }
+    @XmlTransient
+    public void setDancers(List<Dancer> dancers) {
+        this.dancers = dancers;
+    }
+
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Tickets>
+    <Ticket>
+        <email>jorgedrexler@gmail.com</email>
+        <TicketId>2</TicketId>
+        <CompleteName>Jorge Drexler</CompleteName>
+        <NationalIdentification>43787415</NationalIdentification>
+    </Ticket>
+    <Ticket>
+        <email>pedrosmith@gmail.com</email>
+        <TicketId>3</TicketId>
+        <CompleteName>Pedro Smith</CompleteName>
+        <NationalIdentification>43787415</NationalIdentification>
+    </Ticket>
+    <Ticket>
+        <email>sherlock@gmail.com</email>
+        <TicketId>4</TicketId>
+        <CompleteName>Sherlock Holmes</CompleteName>
+        <NationalIdentification>4444444</NationalIdentification>
+    </Ticket>
+    <Ticket>
+        <email>watsonjohn@gmail.com</email>
+        <TicketId>5</TicketId>
+        <CompleteName>John Watson</CompleteName>
+        <NationalIdentification>4444445</NationalIdentification>
+    </Ticket>
+    <Ticket>
+        <email>marado@gmail.com</email>
+        <TicketId>6</TicketId>
+        <CompleteName>Diego Maradona</CompleteName>
+        <NationalIdentification>4444446</NationalIdentification>
+    </Ticket>
+</Tickets>

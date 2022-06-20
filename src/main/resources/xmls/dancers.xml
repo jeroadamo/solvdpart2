@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Concerts idConcerts="0">
+<Dancer idDancer="2">
     <Concert idConcerts="1">
         <Area>
             <CardinalLocation>south</CardinalLocation>
             <idArea>1</idArea>
         </Area>
-        <Date>27/05/2022</Date>
+        <Date>27/5/2022</Date>
         <Duration>2hs</Duration>
         <Tickets>
             <email>petergabriel@yahoo.com</email>
@@ -49,15 +49,15 @@
             <CompleteName>Vito Corleone</CompleteName>
             <NationalIdentification>4444447</NationalIdentification>
         </Tickets>
-        <Time>20:30</Time>
+        <Time>20.30</Time>
     </Concert>
     <Concert idConcerts="2">
         <Area>
-            <CardinalLocation>north</CardinalLocation>
-            <idArea>2</idArea>
+            <CardinalLocation>south</CardinalLocation>
+            <idArea>1</idArea>
         </Area>
-        <Date>27/05/2022</Date>
-        <Duration>2hs</Duration>
+        <Date>27/5/2022</Date>
+        <Duration>1,5hs</Duration>
         <Tickets>
             <email>petergabriel@yahoo.com</email>
             <TicketId>1</TicketId>
@@ -102,4 +102,5 @@
         </Tickets>
         <Time>22:30</Time>
     </Concert>
-</Concerts>
+    <Studio>MTV</Studio>
+</Dancer>

@@ -6,12 +6,12 @@ public class Band {
     @JsonProperty
     private int idBand;
     @JsonProperty
-    private int idConcerts;
+    private Concert concert;
     @JsonProperty
     private String name;
-    public Band(int idBand, int idConcerts, String name) {
+    public Band(int idBand, Concert concert, String name) {
         this.idBand = idBand;
-        this.idConcerts = idConcerts;
+        this.concert = concert;
         this.name = name;
     }
     public Band(){}
@@ -21,20 +21,20 @@ public class Band {
     public void setIdBand(int idBand) {
         this.idBand = idBand;
     }
-    public int getIdConcerts() {
-        return idConcerts;
-    }
-    public void setIdConcerts(int idConcerts) {
-        this.idConcerts = idConcerts;
-    }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
+    public Concert getConcert() {
+        return concert;
+    }
+    public void setConcert(Concert concert) {
+        this.concert = concert;
+    }
     @Override
     public String toString() {
-        return "Band{" + "idBand=" + idBand + ", idConcerts=" + idConcerts + ", name='" + name + '\'' + '}';
+        return "Band{" + "idBand=" + idBand + ", concert=" + concert + ", name='" + name + '\'' + '}';
     }
 }

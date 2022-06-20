@@ -1,0 +1,47 @@
+{
+  "idConcert" : 2,
+  "timePlay" : "22:30",
+  "duration" : "1,5hs",
+  "date" : "27/5/2022",
+  "area" : {
+    "idArea" : 1,
+    "cardinalLocation" : "south"
+  },
+  "tickets" : [ {
+    "idTickets" : 1,
+    "nameSurname" : "Peter Gabriel",
+    "email" : "petergabriel@yahoo.com",
+    "nationalId" : 42555887
+  }, {
+    "idTickets" : 2,
+    "nameSurname" : "Jorge Drexler",
+    "email" : "jorgedrexler@gmail.com",
+    "nationalId" : 43787415
+  }, {
+    "idTickets" : 3,
+    "nameSurname" : "Pedro Smith",
+    "email" : "pedrosmith@gmail.com",
+    "nationalId" : 43787415
+  }, {
+    "idTickets" : 4,
+    "nameSurname" : "Sherlock Holmes",
+    "email" : "sherlock@gmail.com",
+    "nationalId" : 4444444
+  }, {
+    "idTickets" : 5,
+    "nameSurname" : "John Watson",
+    "email" : "watsonjohn@gmail.com",
+    "nationalId" : 4444445
+  }, {
+    "idTickets" : 6,
+    "nameSurname" : "Diego Maradona",
+    "email" : "marado@gmail.com",
+    "nationalId" : 4444446
+  }, {
+    "idTickets" : 7,
+    "nameSurname" : "Vito Corleone",
+    "email" : "vitocorleone@gmail.com",
+    "nationalId" : 4444447
+  } ],
+  "concerts" : null
+}

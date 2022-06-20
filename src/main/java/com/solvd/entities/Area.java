@@ -1,5 +1,7 @@
 package com.solvd.entities;
 
+import jakarta.xml.bind.annotation.XmlElement;
+
 public class Area {
     private int idArea;
     private String cardinalLocation;
@@ -13,12 +15,14 @@ public class Area {
     public int getIdArea() {
         return idArea;
     }
+    @XmlElement
     public void setIdArea(int idArea) {
         this.idArea = idArea;
     }
     public String getCardinalLocation() {
         return cardinalLocation;
     }
+    @XmlElement(name = "CardinalLocation")
     public void setCardinalLocation(String cardinalLocation) {
         this.cardinalLocation = cardinalLocation;
     }

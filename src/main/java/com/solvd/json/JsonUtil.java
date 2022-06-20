@@ -2,10 +2,10 @@ package com.solvd.json;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.solvd.entities.Area;
-import com.solvd.entities.Band;
-import com.solvd.entities.ElectricService;
-import com.solvd.entities.Employee;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.solvd.entities.*;
+import com.solvd.service.ConcertDaoService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,22 +17,21 @@ import java.util.List;
 public class JsonUtil {
     private final static Logger LOGGER = LogManager.getLogger(JsonUtil.class);
     ObjectMapper objectMapper = new ObjectMapper();
-    ElectricService electricServiceEmployee = new ElectricService(1, new Area(1, "south"), true);
-    public void electricServiceSetter() {
+    ObjectWriter writer = objectMapper.writerWithDefaultPrettyPrinter();
+    ConcertDaoService cds = new ConcertDaoService();
+    Concert concert= cds.getByConcertId(2);
+    public void concertWriter() {
         try {
-            objectMapper.writeValue(new File("src/main/resources/json/electricservice.json"), electricServiceEmployee);
+            writer.writeValue(new File("src/main/resources/json/concert.json"), concert);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-    public void esListPrinter() {
-        File file = new File("src/main/resources/json/electricservices.json");
-        JavaType type = objectMapper.getTypeFactory().constructCollectionType(List.class, ElectricService.class);
+    public void printConcert() {
+        File file = new File("src/main/resources/json/concert.json");
         try {
-            List<ElectricService> services = objectMapper.readValue(file, type);
-            services.forEach(electricService -> {
-                LOGGER.info(electricService);
-            });
+            Concert concert1 = objectMapper.readValue(file, Concert.class);
+            LOGGER.info(concert1);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -20,7 +20,7 @@ public class MyBatisRunner {
 //        myBatisUtil.getSelectAllBand();
 //        myBatisUtil.getMapperConcert(1);
 //        myBatisUtil.getSelectAllConcerts();
-//        myBatisUtil.insertBand(10,2,"Charly García");
+     myBatisUtil.insertTicket("Oscar Wilde", "oscarwilde@hotmail.com", 1125463);
 //        myBatisUtil.deleteBand(10);
     }
 }

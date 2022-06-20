@@ -22,8 +22,8 @@ public class PatternsRunner {
 //      "read all concerts", "insert band","delete band".
 //      set integer to null if select all.
 
-        MyBatisFactory batisFactory = new MyBatisFactory();
-        batisFactory.getBatis("read band by id", 2);
+//        MyBatisFactory batisFactory = new MyBatisFactory();
+//        batisFactory.getBatis("read band by id", 2);
 //  -----------------------------------------------------------------------------------------------------------------------
         Ticket ticket = new TicketBuilder().setIdTickets(500).setEmail("bobodenkirk@gmail.com").setNameSurname("Bob Odenkirk").setNationalId(112548976).build();
         LOGGER.info(ticket);

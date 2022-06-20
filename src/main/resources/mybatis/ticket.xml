@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.entities.Ticket">
+    <resultMap id="Ticket" type="com.solvd.entities.Ticket" autoMapping="false">
+        <result column="name_surname" property="nameSurname" />
+        <result column="email" property="email" />
+        <result column="national_id" property="nationalId"/>
+    </resultMap>
+    <select id="getByIdTicket" parameterType="int" resultMap="Ticket">
+        SELECT * FROM Tickets WHERE idTickets =#{id};
+    </select>
+    <insert id="insertTicket" parameterType="com.solvd.entities.Ticket">
+        INSERT INTO Tickets(name_surname, email, national_id) VALUES (#{nameSurname}, #{email}, #{nationalId});
+    </insert>
+</mapper>

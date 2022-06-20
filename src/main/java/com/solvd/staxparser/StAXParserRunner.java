@@ -12,7 +12,7 @@ public class StAXParserRunner {
     public static void main(String[] args) {
         StAXParserUtil stAXParserUtil = new StAXParserUtil();
         try {
-            LOGGER.info(stAXParserUtil.parser("src/main/resources/staxparser/bands.xml"));
+            LOGGER.info(stAXParserUtil.parser("src/main/resources/staxparser/tickets.xml"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (XMLStreamException e) {

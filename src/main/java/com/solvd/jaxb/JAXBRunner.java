@@ -22,26 +22,20 @@ public class JAXBRunner {
     private final static Logger LOGGER = LogManager.getLogger(JAXBRunner.class);
     public static void main(String args[]) throws JAXBException, IOException {
         ArrayList<Concert> concertArrayList = new ArrayList<>();
-        ConcertDaoService concerts = new ConcertDaoService();
-        Concert concert = new Concert(1, "20:30", "2hs", "27/05/2022", new Area(1, "south"), 1);
-        Concert concert1 = new Concert(2, "22:30", "2hs", "27/05/2022", new Area(2, "north"), 1);
+        ConcertDaoService concertDaoService = new ConcertDaoService();
+        Concert concerts = new Concert();
+        Concert concert = new Concert(1, "20:30", "2hs", "27/05/2022", new Area(1, "south"), concertDaoService.getByConcertId(1).getTickets());
+        Concert concert1 = new Concert(2, "22:30", "2hs", "27/05/2022", new Area(2, "north"), concertDaoService.getByConcertId(2).getTickets());
         concertArrayList.add(concert);
         concertArrayList.add(concert1);
         concerts.setConcerts(concertArrayList);
         try {
-            JAXBContext context = JAXBContext.newInstance(ConcertDaoService.class);
+            JAXBContext context = JAXBContext.newInstance(Concert.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(concerts, new FileOutputStream("src/main/resources/jaxb/marshalled.xml"));
-
-            Unmarshaller unmarshaller = context.createUnmarshaller();
-            ConcertDaoService concertDaoService = (ConcertDaoService) unmarshaller.unmarshal(new File("src/main/resources/jaxb/marshalled.xml"));
-            LOGGER.info(concertDaoService);
         } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
-
-        JAXBUnmarshaller jaxbUnmarshaller = new JAXBUnmarshaller();
-        LOGGER.info(jaxbUnmarshaller.unmarshall());
     }
 }
